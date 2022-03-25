@@ -21,7 +21,6 @@ public class ProgrammingLanguagesController {
     public ProgrammingLanguagesController(ProgramingLanguageService programingLanguageService) {
         this.programingLanguageService = programingLanguageService;
     }
-
     @PostMapping
     public ProgrammingLanguage create(@RequestBody CreateLanguageRequest request) {
         ProgrammingLanguage programmingLanguage = ProgrammingLanguageMap.map(request);
@@ -39,7 +38,6 @@ public class ProgrammingLanguagesController {
     public ProgrammingLanguage put(@PathVariable("id") Integer id,
                                    @RequestBody PutLanguageRequest request) {
         return null;
-
     }
     @PatchMapping("/{Id}")
     public ProgrammingLanguage patch(@RequestBody PatchLanguageRequest request,
@@ -49,5 +47,4 @@ public class ProgrammingLanguagesController {
     @DeleteMapping("/{Id}")
     public void delete(@PathVariable("id") Integer id){
     }
-
 }
